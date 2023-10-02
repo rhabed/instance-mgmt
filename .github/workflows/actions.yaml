@@ -11,16 +11,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Install Requirements
+      - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v2
         with:
-          python-version: ${{ matrix.python-version }}
+          python-version: ${{ matrix.python-version }}        
+      - name: Install Requirements
         run: |
           pip3 install -r requirements.txt
       - name: CI
-        uses: actions/setup-python@v2
-        with:
-          python-version: ${{ matrix.python-version }}
         run: |
           sam build
           sam validate         
