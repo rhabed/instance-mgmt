@@ -21,10 +21,6 @@ jobs:
         run: |
           sam build
           sam validate         
-      - name: Deploy stack
-        run: |
-          export AWS_DEFAULT_REGION='ap-southeast-2'
-          bash bin/local_run.sh
       # awslocal cloudformation create-stack --stack-name  my-stack --template-body file://./template.yaml --region ap-southeast-2
       # - name: Sleep for 30 seconds
       #   run: sleep 30s

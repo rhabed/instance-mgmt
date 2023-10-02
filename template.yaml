@@ -20,11 +20,17 @@ Resources:
       Runtime: python3.9
       Architectures:
         - x86_64
+      Policies:
+        - Statement:
+          - Sid: EC2
+            Effect: Allow
+            Action:
+              - ec2:TerminateInstances
+              - ec2:DescribeInstances
+            Resource: '*'
       Events:
         ItsTime:
-          Type: Schedule
+          Type: ScheduleV2
           Properties:
-            Type: ScheduleV2
-            Properties:
-              ScheduleExpression: "rate(1 hour)"
+            ScheduleExpression: "rate(1 hour)"
 
