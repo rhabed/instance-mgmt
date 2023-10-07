@@ -34,5 +34,6 @@ Resources:
         ItsTime:
           Type: ScheduleV2
           Properties:
-            ScheduleExpression: "rate(1 hour)"
+            # ScheduleExpression: "rate(1 hour)"
+            ScheduleExpression: "cron(01 23 * * ? *)"
 
