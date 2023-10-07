@@ -27,6 +27,8 @@ Resources:
             Action:
               - ec2:TerminateInstances
               - ec2:DescribeInstances
+              - ec2:DescribeHosts
+              - ec2:ReleaseHots
             Resource: '*'
       Events:
         ItsTime:
