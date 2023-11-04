@@ -245,3 +245,5 @@ $RECYCLE.BIN/
 
 .aws-sam/*
 .aws-sam
+.venv
+.venv/

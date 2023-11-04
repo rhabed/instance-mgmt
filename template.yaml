@@ -35,5 +35,5 @@ Resources:
           Type: ScheduleV2
           Properties:
             # ScheduleExpression: "rate(1 hour)"
-            ScheduleExpression: "cron(01 23 * * ? *)"
+            ScheduleExpression: "cron(01 09 * * ? *)"
 
