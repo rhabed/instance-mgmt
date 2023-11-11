@@ -20,7 +20,7 @@ def release_hosts():
         for host in response['Hosts']:
             if host['State'] == 'available' and host['Instances'] == []:
                 logging.info(host['HostId'])
-                r = ec2_client.release-hosts(HostIds=[host['HostId']])
+                r = ec2_client.release_hosts(HostIds=[host['HostId']])
                 logging.info(r)
                 myresponse["Hosts"].append(host['HostId'])
             else:

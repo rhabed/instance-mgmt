@@ -18,17 +18,18 @@ Resources:
       CodeUri: instance_mgmt/
       Handler: app.lambda_handler
       Runtime: python3.9
+      Timeout: 60
       Architectures:
         - x86_64
       Policies:
         - Statement:
           - Sid: EC2
             Effect: Allow
-            Action:
+              Action:
               - ec2:TerminateInstances
               - ec2:DescribeInstances
               - ec2:DescribeHosts
-              - ec2:ReleaseHots
+              - ec2:ReleaseHosts
             Resource: '*'
       Events:
         ItsTime:
