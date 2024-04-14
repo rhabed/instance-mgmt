@@ -3,7 +3,9 @@ Lambda function that runs every day at 11 PM to terminate any running EC2 instan
 
 # Build and deploy
 `sam validate`
+
 `sam  build`
+
 `sam deploy --stack-name <my-stack-name>`
 
 # Delete
